@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: rgb(255, 187, 0);
+    padding: 30px;
+}
+.titulo h1 { 
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+    font-size: 35px;
+    text-align: center;
+    
+}
+h1:hover {
+    color: aliceblue;
+}
+.imagen-body img {
+    width: 300px;
+    align-items: center;
+    padding: 40px;
+    margin: auto;
+    display: block;
+    border-radius:100px;
+}
+.busqueda name {
+text-align: center;
+
+}
+.busqueda {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    
+}
+.flex-container {
+    display: flex;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+   
+}
+.caja {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    font-size: 20px;
+    color: white;
+}
+
+.caja1 {
+    background-image: url(IMG/margaritaimg.jpeg);
+
+}
+
+.caja2 {
+    background-image: url(IMG/2.jpeg);
+}
+
+.caja3 {
+    background-image: url(IMG/3.jpeg);
+}
+
+.caja4 {
+    background-image: url(IMG/4.jpeg);
+}
