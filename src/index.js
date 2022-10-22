@@ -27,6 +27,10 @@ const loadMargaritaInstruction = (userQuery) => {
         drinkType.innerText = drink.strDrink;
         drinkType.classList.add("drink-type")
         listOfDrinks.append(drinkType);
+        drinkType.addEventListener('click', () => {
+          console.log(drink)
+          document.querySelector('.titulo').style.display = 'none'
+        })
       }
       console.log(responseJson)
     })
