@@ -76,3 +76,13 @@ text-align: center;
 .caja4 {
     background-image: url(IMG/4.jpeg);
 }
+
+ .busqueda button {
+    cursor: pointer;
+
+ }
+ #botonMostrar button {
+    width: 100%;
+    max-width: 600px;
+    font-size: 30px;
+ }
