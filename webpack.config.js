@@ -1,6 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const outputDir = "./build";
+const outputDir = "./docs";
 
 module.exports = (env, argv) => {
   const isProduction =  argv.mode === 'production'
