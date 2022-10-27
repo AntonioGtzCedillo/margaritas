@@ -46,35 +46,48 @@ text-align: center;
     padding: 30px;
     align-items: center;
     text-align: center;
+    width: 100%;
+    height: 200px;
+    
    
 }
 .caja {
     display: flex;
-    align-items: center;
+    align-items: center-top;
     justify-content: center;
     width: 100%;
     height: 200px;
     background-size: contain;
     background-repeat: no-repeat;
     font-size: 20px;
-    color: white;
+    color: red;
 }
 
 .caja1 {
     background-image: url(IMG/margaritaimg.jpeg);
+    background-size: cover;
+    margin: 10px;
 
 }
 
 .caja2 {
     background-image: url(IMG/2.jpeg);
+    background-size: cover;
+    margin: 10px;
+    
+
 }
 
 .caja3 {
     background-image: url(IMG/3.jpeg);
+    background-size: cover;
+    margin: 10px;
 }
 
 .caja4 {
     background-image: url(IMG/4.jpeg);
+    background-size: cover;
+    margin: 10px;
 }
 
  .busqueda button {
