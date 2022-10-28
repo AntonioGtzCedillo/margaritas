@@ -23,6 +23,7 @@ const loadMargaritaInstruction = (userQuery) => {
         }
 
       }
+      
 
       for (let drink of responseJson.drinks) {
         const drinkType = document.createElement('p');
@@ -30,7 +31,10 @@ const loadMargaritaInstruction = (userQuery) => {
         drinkType.classList.add("drink-type")
         listOfDrinks.append(drinkType);
 
+
+
         drinkType.addEventListener("click", () => {
+          //ocultar pagina principal
           console.log(drinkType.innerText)
           document.querySelector(".titulo").style.display = "none"
           document.querySelector(".flex-container").style.display = "none"
@@ -39,16 +43,25 @@ const loadMargaritaInstruction = (userQuery) => {
 
           console.log(drink, "---")
 
+          //mostrar datos de bebida clickeada
+          const imgDeBebida = document.createElement("img")
+          const detallesBebida = document.getElementById("detallesBebida")
+          imgDeBebida.setAttribute("src", drink.strDrinkThumb)
+          detallesBebida.append(imgDeBebida);
 
 
         })
         regresar.addEventListener("click", () => {
+          // regresar a vista original (lista de bebidas)
           document.querySelector(".titulo").style.display = "block"
           document.querySelector(".flex-container").style.display = "flex"
           document.querySelector(".busqueda").style.display = "block"
           regresar.style.display = "none"
-          
+
         })
+
+
+
       }
       console.log(responseJson)
     })
@@ -58,7 +71,19 @@ const inputQuery = document.getElementById("user-input")
 loadMoreBtn.addEventListener('click', () => {
   loadMargaritaInstruction(inputQuery.value);
 
-
+ 
 })
 
 //cada que busque algo se debe borrar la busqueda pasada y solo regresar la que encontro
+
+
+if (document.getElementById("detallesBebida")) {
+
+  const oldImg = document.getElementById("detallesBebida ")
+
+  for (let index = oldImg.length - 1; index >= 0; index--) {
+    oldImg[index].remove()
+
+  }
+
+}
