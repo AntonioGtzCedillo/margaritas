@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "webpack --mode=development",
     "build": "webpack --mode=production",
-    "start": "servor build index.html 3000 --reload"
+    "start": "servor docs index.html 3000 --reload"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",

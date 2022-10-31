@@ -45,12 +45,41 @@ const loadMargaritaInstruction = (userQuery) => {
 
           //mostrar datos de bebida clickeada
           const imgDeBebida = document.createElement("img")
-          const detallesBebida = document.getElementById("detallesBebida")
+          imgDeBebida.classList.add("oldImage")
+          const infoBebidaDiv = document.getElementById("infoBebidaDiv")
           imgDeBebida.setAttribute("src", drink.strDrinkThumb)
-          detallesBebida.append(imgDeBebida);
+
+          if (document.getElementsByClassName("oldImage")) {
+
+            const oldImage = document.getElementsByClassName("oldImage")
+            
+            for (let index = oldImage.length - 1; index >= 0; index--) {
+              oldImage[index].remove()
+          
+            }
+          }
+
+        if (document.getElementsByClassName("oldParagraph")) {
+
+          const oldParagraph = document.getElementsByClassName("oldParagraph")
+          
+          for (let index = oldParagraph.length - 1; index >= 0; index--) {
+            oldParagraph[index].remove()
+        
+          }
+        }
+
+          infoBebidaDiv.append(imgDeBebida);
+//mostar informacion de mi array de objetos
+          const infomacionBebida = document.createElement("p")
+          infomacionBebida.classList.add("oldParagraph")
+          infomacionBebida.innerText = drink.strInstructions
+          infoBebidaDiv.append(infomacionBebida);
 
 
         })
+
+
         regresar.addEventListener("click", () => {
           // regresar a vista original (lista de bebidas)
           document.querySelector(".titulo").style.display = "block"
@@ -74,16 +103,9 @@ loadMoreBtn.addEventListener('click', () => {
  
 })
 
-//cada que busque algo se debe borrar la busqueda pasada y solo regresar la que encontro
 
 
-if (document.getElementById("detallesBebida")) {
-
-  const oldImg = document.getElementById("detallesBebida ")
-
-  for (let index = oldImg.length - 1; index >= 0; index--) {
-    oldImg[index].remove()
-
-  }
-
-}
+// const infomacionBebida = document.createElement("p")
+// const infoBebidaDiv = document.getElementById("infoBebidaDiv")
+// infomacionBebida.setAttribute("src", drink.strInstructions)
+// infoBebidaDiv.append(infomacionBebida);
