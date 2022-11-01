@@ -75,6 +75,8 @@ const loadMargaritaInstruction = (userQuery) => {
           infomacionBebida.classList.add("oldParagraph")
           infomacionBebida.innerText = drink.strInstructions
           infoBebidaDiv.append(infomacionBebida);
+          imgDeBebida.setAttribute("id", "imagen-bebida")
+          detallesBebida.append(imgDeBebida);
 
 
         })
