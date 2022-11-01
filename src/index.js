@@ -86,6 +86,8 @@ const loadMargaritaInstruction = (userQuery) => {
           document.querySelector(".flex-container").style.display = "flex"
           document.querySelector(".busqueda").style.display = "block"
           regresar.style.display = "none"
+          document.querySelector(".oldImage").style.display = "none"
+          document.querySelector(".oldParagraph").style.display = "none"
 
         })
 
