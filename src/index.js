@@ -87,7 +87,7 @@ const loadMargaritaInstruction = (userQuery) => {
           infomacionBebida.innerText = drink.strInstructions
           infoBebidaDiv.append(infomacionBebida);
           imgDeBebida.setAttribute("id", "imagen-bebida")
-          detallesBebida.append(imgDeBebida);
+          infoBebidaDiv.append(imgDeBebida);
 
           const parrafoVacio = document.createElement("br")
           infoBebidaDiv.append(parrafoVacio)
