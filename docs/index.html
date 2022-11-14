@@ -16,35 +16,52 @@
 <script defer src="main.js"></script></head>
 
 <body>
-    <header>
 
-        <div class="titulo">
-            <h1 class="bar"> Pollos BAR</h1>
-            
+
+    <div class="titulo">
+
+        <h1 class="bar"> Pollos BAR</h1>
+
+    </div>
+
+    <div class="flex-container" id="cajaImagenes">
+
+        <div class="caja1 caja">Margarita</div>
+        <div class="caja2 caja">Mojito</div>
+        <div class="caja3 caja">Vampiro</div>
+        <div class="caja4 caja">Martini</div>
+
+    </div>
+
+    <div class="busqueda" id="busqueda">
+        <label for="bebidas">Buscar bebidas:</label>
+        <input type="text" id="user-input" name="busqueda bebidas">
+        <button type="submit" id="enviar" name="buscar">SEARCH</button>
+    </div>
+
+
+    <div id="botonMostrar">
+        <button type="button" id="mostrar">Regresar</button>
+    </div>
+
+
+
+    <div id="infoBebidaDiv" class="flex-container-info-bebida">
+        <div class="flex-container-ddp">
+
+            <div id="instructions-id">
+                <h2>INSTRUCTIONS:</h1>
+            </div>
+
+            <div id="ingredientes-id">
+                <h3>INGREDIENTS:</h3>
+            </div>
+          
         </div>
-        <div class="flex-container" id="cajaImagenes">
-            <div class="caja1 caja">Margarita</div>
-            <div class="caja2 caja">Mojito</div>
-            <div class="caja3 caja">Vampiro</div>
-            <div class="caja4 caja">Martini</div>
-            
-        </div>
+        <div id="imagenDiv" class="imgDiv"></div>
 
-        <div class="busqueda" id="busqueda">
-            <label for="bebidas">Buscar bebidas:</label>
-            <input type="text" id="user-input" name="busqueda bebidas">
-            <button type="submit" id="enviar" name="buscar">SEARCH</button> 
-        </div>
+    </div>
 
-
-        <div id="botonMostrar">
-            <button type="button" id="mostrar">Regresar</button>
-        </div>
-
-        <div id = "infoBebidaDiv" class="borrarInfoVieja"></div>
-
-    
-    </header>
 
 </body>
 
