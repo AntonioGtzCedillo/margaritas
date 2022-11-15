@@ -13,6 +13,7 @@ instructionsDiv.style.display = "none"
 ingredientsDiv.style.display = "none"
 
 
+
 const loadMargaritaInstruction = (userQuery) => {
   const DRINKS_URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + userQuery;
   fetch(DRINKS_URL)
