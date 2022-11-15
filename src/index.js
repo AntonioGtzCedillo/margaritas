@@ -5,7 +5,14 @@ const fetch = require("isomorphic-fetch");
 const listOfDrinks = document.getElementById('busqueda');
 const loadMoreBtn = document.getElementById('enviar');
 const regresar = document.getElementById('botonMostrar');
+const instructionsDiv = document.getElementById('instructions-id');
+const ingredientsDiv = document.getElementById('ingredientes-id');
+const imagenDiv = document.getElementById('imagenDiv');
 regresar.style.display = "none"
+instructionsDiv.style.display = "none"
+ingredientsDiv.style.display = "none"
+
+
 
 const loadMargaritaInstruction = (userQuery) => {
   const DRINKS_URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + userQuery;
@@ -47,13 +54,12 @@ const loadMargaritaInstruction = (userQuery) => {
 
           //mostrar datos de bebida clickeada
           const imgDeBebida = document.createElement("img")
-          imgDeBebida.classList.add("oldImage")
-          const infoBebidaDiv = document.getElementById("infoBebidaDiv")
+          imgDeBebida.classList.add("class-old-image")
           imgDeBebida.setAttribute("src", drink.strDrinkThumb)
 
-          if (document.getElementsByClassName("oldImage")) {
+          if (document.getElementsByClassName("class-old-image")) {
 
-            const oldImage = document.getElementsByClassName("oldImage")
+            const oldImage = document.getElementsByClassName("class-old-image")
 
             for (let index = oldImage.length - 1; index >= 0; index--) {
               oldImage[index].remove()
@@ -61,72 +67,62 @@ const loadMargaritaInstruction = (userQuery) => {
             }
           }
 
-          if (document.getElementsByClassName("oldParagraph")) {
+          if (document.getElementsByClassName("parrafo-instrucciones")) {
 
-            const oldParagraph = document.getElementsByClassName("oldParagraph")
+            const oldParagraph = document.getElementsByClassName("parrafo-instrucciones")
 
             for (let index = oldParagraph.length - 1; index >= 0; index--) {
               oldParagraph[index].remove()
 
             }
           }
-          if (document.getElementsByClassName("borrarIngredientes")) {
+          const borrarIngredientes = document.getElementsByClassName("borrar-ingredientes")
 
-            const borrarIngredientes = document.getElementsByClassName("borrarIngredientes")
+          if (borrarIngredientes) {
+
 
             for (let index = borrarIngredientes.length - 1; index >= 0; index--) {
               borrarIngredientes[index].remove()
 
             }
-          }
+          }          
 
-          infoBebidaDiv.append(imgDeBebida);
           //mostar informacion de la bebida seleccionada (instrcciones, imagen = ddp (drink detail page)) 
           const infomacionBebida = document.createElement("p")
-          infomacionBebida.classList.add("oldParagraph")
+          infomacionBebida.classList.add("parrafo-instrucciones")
           infomacionBebida.innerText = drink.strInstructions
-          infoBebidaDiv.append(infomacionBebida);
+          instructionsDiv.append(infomacionBebida);//aqui se agrega a ese div el parrafo creado con INSTRUCTIONS:
           imgDeBebida.setAttribute("id", "imagen-bebida")
-          detallesBebida.append(imgDeBebida);
-
-          const parrafoVacio = document.createElement("br")
-          infoBebidaDiv.append(parrafoVacio)
-
+          imagenDiv.append(imgDeBebida);
+          instructionsDiv.style.display = "block"
+          ingredientsDiv.style.display = "block"
 
           const ingredientes = {
-            strIngredient1: "Galliano",
-            strIngredient2: "Ginger ale",
-            strIngredient3: "Ice",
-            strIngredient4: null,
-            strIngredient5: null,
-            strIngredient6: null,
-            strIngredient7: null,
-            strIngredient8: null,
-            strIngredient9: null,
-            strIngredient10: null,
-            strIngredient11: null,
-            strIngredient12: null,
-            strIngredient13: null,
-            strIngredient14: null,
-            strIngredient15: null
+            strIngredient1: drink.strIngredient1,
+            strIngredient2: drink.strIngredient2,
+            strIngredient3: drink.strIngredient3,
+            strIngredient4: drink.strIngredient4,
+            strIngredient5: drink.strIngredient5,
+            strIngredient6: drink.strIngredient6,
+            strIngredient7: drink.strIngredient7,
+            strIngredient8: drink.strIngredient8,
+            strIngredient9: drink.strIngredient9,
+            strIngredient10: drink.strIngredient10,
+            strIngredient11: drink.strIngredient11,
+            strIngredient12: drink.strIngredient12,
+            strIngredient13: drink.strIngredient13,
+            strIngredient14: drink.strIngredient14,
+            strIngredient15: drink.strIngredient15,
+            
           }
 //mostrar ingredientes usando operador ternario
-          const parrafoIngredientes = `ingredientes: 
-          ${ingredientes.strIngredient1 !== null ? ingredientes.strIngredient1 + (ingredientes.strIngredient2 !== null ? ", " : ".") : ""}
-          ${ingredientes.strIngredient2 !== null ? ingredientes.strIngredient2 + (ingredientes.strIngredient3 !== null ? ", " : ".") : ""}
-          ${ingredientes.strIngredient3 !== null ? ingredientes.strIngredient3 + (ingredientes.strIngredient4 !== null ? ", " : ".") : ""}
-          ${ingredientes.strIngredient4 !== null ? ingredientes.strIngredient4 + (ingredientes.strIngredient5 !== null ? ", " : ".") : ""}
-          ${ingredientes.strIngredient5 !== null ? ingredientes.strIngredient5 + (ingredientes.strIngredient6 !== null ? ", " : ".") : ""}
-          ${ingredientes.strIngredient6 !== null ? ingredientes.strIngredient6 + (ingredientes.strIngredient7 !== null ? ", " : ".") : ""}`
+          const parrafoIngredientes = `${ingredientes.strIngredient1 !== null ? ingredientes.strIngredient1 + (ingredientes.strIngredient2 !== null ? ", " : ".") : ""}${ingredientes.strIngredient2 !== null ? ingredientes.strIngredient2 + (ingredientes.strIngredient3 !== null ? ", " : ".") : ""}${ingredientes.strIngredient3 !== null ? ingredientes.strIngredient3 + (ingredientes.strIngredient4 !== null ? ", " : ".") : ""}${ingredientes.strIngredient4 !== null ? ingredientes.strIngredient4 + (ingredientes.strIngredient5 !== null ? ", " : ".") : ""}${ingredientes.strIngredient5 !== null ? ingredientes.strIngredient5 + (ingredientes.strIngredient6 !== null ? ", " : ".") : ""}${ingredientes.strIngredient6 !== null ? ingredientes.strIngredient6 + (ingredientes.strIngredient7 !== null ? ", " : ".") : ""}`
 
           console.log(parrafoIngredientes)
           const parrafoNuevoIngre = document.createElement("p")
-          parrafoNuevoIngre.classList.add("borrarIngredientes")
+          parrafoNuevoIngre.classList.add("borrar-ingredientes")
           parrafoNuevoIngre.innerText = parrafoIngredientes
-          infoBebidaDiv.append(parrafoNuevoIngre);
-
-          imgDeBebida.setAttribute("id", "imagen-bebida")
-          infoBebidaDiv.append(imgDeBebida);
+          ingredientsDiv.append(parrafoNuevoIngre);
           titulo.innerText = drink.strDrink
 
         })
@@ -137,10 +133,20 @@ const loadMargaritaInstruction = (userQuery) => {
           document.querySelector(".flex-container").style.display = "flex"
           document.querySelector(".busqueda").style.display = "block"
           regresar.style.display = "none"
-          document.querySelector(".oldImage").style.display = "none"
-          document.querySelector(".oldParagraph").style.display = "none"
-          document.querySelector(".borrarIngredientes").style.display = "none"
+          document.querySelector(".class-old-image").style.display = "none"
+          document.querySelector(".parrafo-instrucciones").style.display = "none"
+          document.querySelector(".borrar-ingredientes").style.display = "none"
           titulo.innerText = "Pollos BAR"
+          instructionsDiv.style.display = "none"
+          ingredientsDiv.style.display = "none"
+
+          const oldParagraphs = document.getElementsByClassName("drink-type")
+
+          for (let index = oldParagraphs.length - 1; index >= 0; index--) {
+            oldParagraphs[index].remove()
+  
+          }
+
 
         })
 
@@ -159,8 +165,4 @@ loadMoreBtn.addEventListener('click', () => {
 })
 
 
-
-// const infomacionBebida = document.createElement("p")
-// const infoBebidaDiv = document.getElementById("infoBebidaDiv")
-// infomacionBebida.setAttribute("src", drink.strInstructions)
-// infoBebidaDiv.append(infomacionBebida);
+//**validar para que sirve ya que si lo elimino no pasa nada */
