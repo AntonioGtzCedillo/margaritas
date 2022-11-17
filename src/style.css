@@ -123,7 +123,7 @@ button {
     margin: 10px;
     color: #f07110;
     text-shadow: 7px 4px 5px rgb(0, 255, 4);
-   
+
 
 }
 
@@ -193,17 +193,19 @@ button {
     width: 400px;
     height: 400px;
 }
+
 @media only screen and (max-width: 1300px) {
     .flex-container {
         border: 2px solid rgb(0, 34, 255);
     }
+
     .caja {
         border: 4px solid rgb(239, 246, 238);
         max-width: 180px;
         min-width: 180px;
         max-height: 180px;
         min-height: 180px;
-      
+
     }
 }
 
@@ -211,13 +213,14 @@ button {
     .flex-container {
         border: 2px solid rgb(0, 34, 255);
     }
+
     .caja {
         border: 4px solid rgb(236, 148, 7);
         max-width: 110px;
         min-width: 110px;
         max-height: 110px;
         min-height: 110px;
-       
+
     }
 }
 
@@ -227,6 +230,7 @@ button {
         /* flex-direction: row; ------asi se pone en columna o fila */
         border: 2px solid red;
     }
+
     .caja {
         border: 4px solid rgb(221, 0, 255);
         max-width: 60px;
@@ -234,11 +238,11 @@ button {
         max-height: 60px;
         min-height: 60px;
         font-size: 15px;
-   
+
     }
 }
 
-.parrafo-instrucciones{
+.parrafo-instrucciones {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: left;
     margin: 20px;
@@ -273,6 +277,7 @@ button {
     border: 4px solid rgb(255, 34, 0);
 
 }
+
 /* aqui se selecciona especificamente el o los elementos
 .flex-container-ddp div {
     display: flex;
@@ -286,8 +291,13 @@ button {
     flex-direction: row;
     border: 4px solid greenyellow;
     justify-content: space-around;
-     line-height: 20px;
+    line-height: 20px;
     text-align: center;
+
+}
+
+.checkboxBorder{
+    text-align: right;
 
 }
 
