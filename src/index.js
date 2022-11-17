@@ -30,7 +30,6 @@ document.querySelector(".cbox1").addEventListener('change', (event) => {
 })
 
 
-
 const loadMargaritaInstruction = (userQuery) => {
   const DRINKS_URL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + userQuery;
   fetch(DRINKS_URL)
@@ -103,6 +102,28 @@ const loadMargaritaInstruction = (userQuery) => {
 
             }
           }          
+          document.querySelector(".cbox1").addEventListener('change', (event) => {
+            if (event.target.checked) {
+              document.getElementById("infoBebidaDiv").style.border = "4px solid greenyellow";
+            } else {
+              document.getElementById("infoBebidaDiv").style.border = "none";
+            }
+          })
+          document.querySelector(".cbox1").addEventListener('change', (event) => {
+            if (event.target.checked) {
+              document.querySelector(".flex-container-ddp").style.border = "4px solid rgb(255, 34, 0)";
+            } else {
+              document.querySelector(".flex-container-ddp").style.border = "none";
+            }
+          })
+          document.querySelector(".cbox1").addEventListener('change', (event) => {
+            if (event.target.checked) {
+              document.querySelector(".flex-container").style.border = "2px solid rgb(0, 34, 255)";
+            } else {
+              document.querySelector(".flex-container").style.border = "none";
+            }
+          })
+          
 
           //mostar informacion de la bebida seleccionada (instrcciones, imagen = ddp (drink detail page)) 
           const infomacionBebida = document.createElement("p")
