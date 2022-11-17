@@ -4,13 +4,30 @@ const fetch = require("isomorphic-fetch");
 
 const listOfDrinks = document.getElementById('busqueda');
 const loadMoreBtn = document.getElementById('enviar');
-const regresar = document.getElementById('botonMostrar');
+const regresar = document.getElementById('mostrar');
 const instructionsDiv = document.getElementById('instructions-id');
 const ingredientsDiv = document.getElementById('ingredientes-id');
 const imagenDiv = document.getElementById('imagenDiv');
+const flexContainer = document.getElementById('infoBebidaDiv');
 regresar.style.display = "none"
 instructionsDiv.style.display = "none"
 ingredientsDiv.style.display = "none"
+flexContainer.style.display = "none"
+
+document.querySelector(".cbox1").addEventListener('change', (event) => {
+  if (event.target.checked) {
+    document.querySelector(".flex-container").style.border = "2px solid rgb(0, 34, 255)";
+  } else {
+    document.querySelector(".flex-container").style.border = "none";
+  }
+})
+document.querySelector(".cbox1").addEventListener('change', (event) => {
+  if (event.target.checked) {
+    document.getElementById("user-input").style.border = "4px solid rgb(0, 255, 204)";
+  } else {
+    document.getElementById("user-input").style.border = "none";
+  }
+})
 
 
 
@@ -96,6 +113,7 @@ const loadMargaritaInstruction = (userQuery) => {
           imagenDiv.append(imgDeBebida);
           instructionsDiv.style.display = "block"
           ingredientsDiv.style.display = "block"
+          flexContainer.style.display = "flex"
 
           const ingredientes = {
             strIngredient1: drink.strIngredient1,
@@ -131,7 +149,7 @@ const loadMargaritaInstruction = (userQuery) => {
         regresar.addEventListener("click", () => {
           // regresar a vista original (lista de bebidas)
           document.querySelector(".flex-container").style.display = "flex"
-          document.querySelector(".busqueda").style.display = "block"
+          document.querySelector(".busqueda").style.display = "flex"
           regresar.style.display = "none"
           document.querySelector(".class-old-image").style.display = "none"
           document.querySelector(".parrafo-instrucciones").style.display = "none"
@@ -139,6 +157,7 @@ const loadMargaritaInstruction = (userQuery) => {
           titulo.innerText = "Pollos BAR"
           instructionsDiv.style.display = "none"
           ingredientsDiv.style.display = "none"
+          flexContainer.style.display = "none"
 
           const oldParagraphs = document.getElementsByClassName("drink-type")
 
