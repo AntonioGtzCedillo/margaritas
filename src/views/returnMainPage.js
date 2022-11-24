@@ -1,5 +1,5 @@
 
-export const returnMainPage = () => {
+export const returnMainPage = (regresar, titulo, instructionsDiv, ingredientsDiv, flexContainer) => {
     // regresar a vista original (lista de bebidas)
     document.querySelector(".flex-container").style.display = "flex"
     document.querySelector(".busqueda").style.display = "flex"
