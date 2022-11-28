@@ -1,6 +1,7 @@
 import "./style.css"
 import { goToDDP } from './views/goToDDP'
 import { returnMainPage } from './views/returnMainPage'
+
 import {
   constants
 } from './constants'
@@ -48,7 +49,6 @@ const disableDarkTheme = () => {
   document.querySelector("body").classList.remove("darkLayout")
 
 }
-
 document.querySelector(".cbox1").addEventListener('change', (event) => {
   if (event.target.checked) {
     removeBorders()
@@ -88,9 +88,8 @@ const loadMargaritaInstruction = (userQuery) => {
         })
         regresar.addEventListener("click", () => {
           returnMainPage(regresar, titulo, instructionsDiv, ingredientsDiv, flexContainer)
-          
-        })
 
+        })
 
       }
       console.log(responseJson)
@@ -99,7 +98,7 @@ const loadMargaritaInstruction = (userQuery) => {
 }
 const inputQuery = document.getElementById("user-input")
 
-  loadMoreBtn.addEventListener('click', () => {
-    loadMargaritaInstruction(inputQuery.value);
-  })
+loadMoreBtn.addEventListener('click', () => {
+  loadMargaritaInstruction(inputQuery.value);
+})
 
