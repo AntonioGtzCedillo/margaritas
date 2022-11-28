@@ -36,10 +36,8 @@ const disableDarkTheme = () => {
 }
 document.querySelector(".cbox1").addEventListener('change', (event) => {
   if (event.target.checked) {
-    removeBorders()
     activateDarkTheme()
   } else {
-    addBorders()
     disableDarkTheme()
 
   }
