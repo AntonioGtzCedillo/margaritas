@@ -23,21 +23,6 @@ instructionsDiv.style.display = "none"
 ingredientsDiv.style.display = "none"
 flexContainer.style.display = "none"
 
-const addBorders = () => {
-  document.querySelector(".flex-container").style.border = "2px solid rgb(0, 34, 255)"
-  document.getElementById("infoBebidaDiv").style.border = "4px solid greenyellow"
-  document.querySelector(".flex-container-ddp").style.border = "4px solid rgb(255, 34, 0)"
-  document.getElementById("user-input").style.border = "4px solid rgb(0, 255, 204)"
-
-
-}
-const removeBorders = () => {
-  document.querySelector(".flex-container").style.border = "none"
-  document.getElementById("infoBebidaDiv").style.border = "none"
-  document.querySelector(".flex-container-ddp").style.border = "none"
-  document.getElementById("user-input").style.border = "none"
-
-}
 const activateDarkTheme = () => {
   document.querySelector("h1").classList.add("darkLayout")
   document.querySelector("body").classList.add("darkLayout")
@@ -51,10 +36,8 @@ const disableDarkTheme = () => {
 }
 document.querySelector(".cbox1").addEventListener('change', (event) => {
   if (event.target.checked) {
-    removeBorders()
     activateDarkTheme()
   } else {
-    addBorders()
     disableDarkTheme()
 
   }
