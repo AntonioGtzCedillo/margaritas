@@ -23,16 +23,6 @@ instructionsDiv.style.display = "none"
 ingredientsDiv.style.display = "none"
 flexContainer.style.display = "none"
 
-const addBorders = () => {
-}
-
-const removeBorders = () => {
-  document.querySelector(".flex-container").style.border = "none"
-  document.getElementById("infoBebidaDiv").style.border = "none"
-  document.querySelector(".flex-container-ddp").style.border = "none"
-  document.getElementById("user-input").style.border = "none"
-
-}
 const activateDarkTheme = () => {
   document.querySelector("h1").classList.add("darkLayout")
   document.querySelector("body").classList.add("darkLayout")
