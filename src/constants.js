@@ -6,6 +6,7 @@ const imagenDiv = document.getElementById('imagenDiv');
 const ingredientsDiv = document.getElementById('ingredientes-id');
 const flexContainer = document.getElementById('infoBebidaDiv');
 const titulo = document.querySelector(".bar")
+const error = document.getElementById("error-id")
 
 export const constants = {
   listOfDrinks: listOfDrinks,
@@ -16,5 +17,6 @@ export const constants = {
   ingredientsDiv: ingredientsDiv,
   flexContainer: flexContainer,
   titulo: titulo,
+  error: error
 }
 
