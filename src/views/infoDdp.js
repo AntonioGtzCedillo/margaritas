@@ -51,11 +51,4 @@ export const infoDdp = (drink, imgDeBebida) => {
     parrafoNuevoIngre.innerText = parrafoIngredientes
     ingredientsDiv.append(parrafoNuevoIngre);
     titulo.innerText = drink.strDrink
-
-    const error404 = document.createElement("p")
-    error404.classList.add("mostrar-error")
-    error404.innerText = parrafoError
-    error.append(error404);
-    titulo.innerText = drink.strDrink
-
 }

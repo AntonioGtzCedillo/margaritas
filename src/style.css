@@ -313,22 +313,3 @@ button {
     padding: 10px;
     border-radius: 20px;
 }
-
-.error404 {
-    background-image: url(IMG/error\ 404.jpeg);
-    display: flex;
-    border: 3px solid red;
-    width: 400px;
-    height: 300px;
-    margin: 30px;
-}
-
-h4 {
-    border: 3px solid red;
-}
-
-/* @media only screen and (max-width: 390px) {
-    .caja {
-        flex-direction: column;
-    }
-} */
