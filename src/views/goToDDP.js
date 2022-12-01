@@ -16,8 +16,6 @@ export const goToDDP = (drinkType, drink) => {
   document.querySelector(".busqueda").style.display = "none"
   regresar.style.display = "block"
 
-
-
   console.log(drink, "---")
 
   //mostrar datos de bebida clickeada

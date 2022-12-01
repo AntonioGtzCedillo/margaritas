@@ -16,12 +16,14 @@ const {
   loadMoreBtn,
   listOfDrinks,
   titulo,
+  errorContainer,
 } = constants
 
 regresar.style.display = "none"
 instructionsDiv.style.display = "none"
 ingredientsDiv.style.display = "none"
 flexContainer.style.display = "none"
+errorContainer.style.display = "none"
 
 const activateDarkTheme = () => {
   document.querySelector("h1").classList.add("darkLayout")
@@ -58,7 +60,14 @@ const loadMargaritaInstruction = (userQuery) => {
         }
 
       }
+// ! = falsy values:null, undefined, 0, "" .
 
+if(!responseJson.drinks){
+  errorContainer.style.display = "block"
+}
+else(
+  errorContainer.style.display = "none"
+)
 
       for (let drink of responseJson.drinks) {
         const drinkType = document.createElement('p');

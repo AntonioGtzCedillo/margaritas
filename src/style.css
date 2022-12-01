@@ -34,7 +34,7 @@ body {
 .darkLayout:hover {
     color: blueviolet
 }
-    
+
 h1:hover {
     color: aliceblue;
 }
@@ -86,6 +86,7 @@ button {
     margin: 40px;
 
 }
+
 #enviar:hover {
     color: white;
 
@@ -296,7 +297,7 @@ button {
 
 }
 
-.checkboxBorder{
+.checkboxBorder {
     text-align: right;
 
 }
@@ -305,19 +306,10 @@ button {
     cursor: pointer;
     padding: 10px;
 }
+
 .drink-type:hover {
-   color: red;
-   background-color:rgba(245, 225, 196, 0.3);
-   padding: 10px;
-   border-radius: 20px;
- 
-   
+    color: red;
+    background-color: rgba(245, 225, 196, 0.3);
+    padding: 10px;
+    border-radius: 20px;
 }
-
-
-
-/* @media only screen and (max-width: 390px) {
-    .caja {
-        flex-direction: column;
-    }
-} */

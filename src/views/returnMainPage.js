@@ -11,6 +11,7 @@ export const returnMainPage = (regresar, titulo, instructionsDiv, ingredientsDiv
     instructionsDiv.style.display = "none"
     ingredientsDiv.style.display = "none"
     flexContainer.style.display = "none"
+  
 
     const oldParagraphs = document.getElementsByClassName("drink-type")
 

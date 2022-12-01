@@ -51,5 +51,4 @@ export const infoDdp = (drink, imgDeBebida) => {
     parrafoNuevoIngre.innerText = parrafoIngredientes
     ingredientsDiv.append(parrafoNuevoIngre);
     titulo.innerText = drink.strDrink
-
 }
